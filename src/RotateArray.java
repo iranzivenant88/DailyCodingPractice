@@ -25,17 +25,31 @@ rotate 2 steps to the right: [3,99,-1,-100]
         }
     }
     public static void main(String[] args) {
-        int [] array ={2,4,56,21,43,77};
-        int k =2; // k is the number of times to rotate our array
+        int [] array ={1,2,3,4,5,6,7};
+        //5,6,7,1,2,3,4
+
+
+        int k =3; // k is the number of times to rotate our array
         int len = array.length; // this is the length of the array
 
-        reverse(array,0,k-1);
-        reverse(array,k,len-1);
         reverse(array,0,len-1);
-
         for (int i: array){
             System.out.print(i +" ");
         }
+        System.out.println("end of 1 reverse");
+        reverse(array,0,k-1);
+        for (int i: array){
+            System.out.print(i +" ");
+        }
+        System.out.println("end of 2 reverse");
+        reverse(array,k,len-1);
+        for (int i: array){
+            System.out.print(i +" ");
+
+        }
+        System.out.println("end of 3 reverse");
+
+
         }
     }
-
+//[5,6,7,1,2,3,4]
