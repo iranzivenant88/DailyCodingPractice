@@ -7,15 +7,30 @@ public class MoveZeroo {
         moveZeroes(num);
         System.out.println(Arrays.toString(num));
     }
-    public static void moveZeroes(int[] num){
-        int counter = 0;
-        for (int i = 0; i < num.length; i++) {
-            if (num[i] != 0) {
-                num[counter] = num[i];
-                counter++;
-            }
+    public static void moveZeroes(int[] nums) {
+        //Input: nums = [0,1,0,3,12]
+        if (nums.length < 2) {
+            return;
         }
 
-        num[0] = 1;
+        int i = 0;
+        int j = 1;
+        // 6,0,8,0
+
+        while (j < nums.length) {
+            if(nums[i] != 0) {
+                j++;
+                i++;
+            } else if(nums[j] == 0) {
+                j++;
+            } else {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+            }
+
+        }
+
     }
+
 }
