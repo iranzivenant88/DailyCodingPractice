@@ -16,10 +16,6 @@ public class MoveZeroo {
             }
         }
 
-        // counter = 2
-        // 1,3,12,3,12
-
-
         num[0] = 1;
     }
 }
