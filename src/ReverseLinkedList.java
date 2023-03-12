@@ -2,6 +2,7 @@ public class ReverseLinkedList {
 
      // Definition for singly-linked list.
       public class ListNode {
+         public ListNode next;
          int val;
 
         ListNode() {}
