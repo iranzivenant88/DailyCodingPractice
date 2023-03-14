@@ -9,7 +9,7 @@ public class ValidPalindrome {
         Input: s = "A man, a plan, a canal: Panama"
         Output: true
         Explanation: "amanaplanacanalpanama" is a palindrome.*/
-        String Input = "A man, a plan, a canal: Panama";
+        String Input = "A guy, a plan, a canal: Panama";
        boolean isValidPalindrome = isPalindrome(Input);
         System.out.println(isValidPalindrome);
     }
