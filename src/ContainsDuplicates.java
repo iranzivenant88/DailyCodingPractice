@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class ContainsDuplicates {
     public boolean containsDuplicate(int[] nums)
+
     {
         if (nums.length <= 1 || nums == null)
         {
