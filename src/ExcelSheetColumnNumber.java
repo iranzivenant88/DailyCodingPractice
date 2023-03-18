@@ -8,5 +8,4 @@ public class ExcelSheetColumnNumber {
         }
         return result;
     }
-
 }
