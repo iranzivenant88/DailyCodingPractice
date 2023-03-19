@@ -1,6 +1,5 @@
 public class DeletenNodeInLinkedlist {
     public ReverseLinkedList.ListNode node;
-
     /**
      * Definition for singly-linked list.
      * public class ListNode {
