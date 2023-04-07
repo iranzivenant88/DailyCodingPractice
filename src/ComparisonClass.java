@@ -4,10 +4,10 @@ public class ComparisonClass {
 
    }
 
-    @Test
+
     void testApi(){
         String name  = "venant";
-        if(name ==Test)
+        //if(name ==Test)
        // Test.testApi("venant");
 
 
