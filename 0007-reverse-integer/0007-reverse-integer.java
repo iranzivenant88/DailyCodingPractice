@@ -1,24 +1,20 @@
 class Solution {
-    public int reverse(int x) {
-        boolean isNegative = false;
-        int reverse = 0;
-       //  if(x<0){
-       //      isNegative = true;
-       //      x = x *(-1);
-       //  } 
-        while(x != 0){
-        int pop = x %10 ; 
+ public int reverse(int x) {
+    int reversed = 0;
+    
+    while (x != 0) {
+        int digit = x % 10;
         
-            x = x/10;
-        
-        if (reverse > Integer.MAX_VALUE/10 || (reverse == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
-        if (reverse < Integer.MIN_VALUE/10 || (reverse == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
-            reverse = reverse * 10 + pop; 
+        // Check for overflow/underflow
+        if (reversed > Integer.MAX_VALUE / 10 || reversed < Integer.MIN_VALUE / 10) {
+            return 0;
         }
-        // if(isNegative){
-        //     reverse = (-1)*reverse;
-        // }        
-        return reverse;
         
+        reversed = reversed * 10 + digit;
+        x /= 10;
     }
+    
+    return reversed;
+}
+
 }
