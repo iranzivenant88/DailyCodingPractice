@@ -3,20 +3,15 @@ class Solution {
         if(x<0){
             return false;
         }
-        //String a = Integer.toString(x);
-        String a = String.valueOf(x);
-        
-    int i =0;
-    int k = a.length()-1;
-        while(i<k){
-            if(a.charAt(i)!=a.charAt(k)){
-                return false;
-            }else {
-                i++;
-                k--;
-            }
+        int rev=0;
+        int original = x;   
+        while(x>0){
+            int digit = x%10;    //rev= rev*10+x%10
+            rev = rev*10+digit;
+            x/=10;
         }
-       return true;
+        return rev == original;
+          
         
     }
 }
