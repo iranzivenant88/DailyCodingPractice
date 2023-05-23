@@ -20,7 +20,6 @@ class Solution {
             arr[l] = x;
             l++;
         }
-        //return Arrays.copyOfRange(nums1,0,k);
         
         return arr;
     }
