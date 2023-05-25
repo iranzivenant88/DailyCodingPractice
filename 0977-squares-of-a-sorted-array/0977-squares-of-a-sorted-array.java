@@ -1,19 +1,27 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
-        // 2 pointer questions 
-      int len = nums.length;
-      int L = 0;
-      int R = len-1;
-      int [] result = new int[len]; // to store new sorted squared values
-      for(int i = len - 1; i >= 0; i--) {
-          if(Math.abs(nums[L]) > Math.abs(nums[R])) {
-              result[i] = nums[L] * nums[L]; 
-              L++; 
-          } else {
-              result[i] = nums[R]  * nums[R]; 
-              R--; 
-          }
-      }
-      return result; 
+        int i = 0;
+        int j = nums.length - 1; 
+        int[] new_arr = new int [nums.length];
+        for(int k = nums.length - 1; k >=0; k--) {
+            if(Math.abs(nums[j]) > Math.abs(nums[i])) {
+               new_arr[k] = nums[j] * nums[j];
+                j--;
+            } else {
+               new_arr[k] = nums[i] * nums[i]; 
+                i++;
+            }
+             
+        }
+        
+        return new_arr;   
     }
 }
+
+
+//[-4,-1,0,3,10] i = 3 , j = 2 original  
+
+// [-,-,-,-,100]
+// j = 3 
+
+// [0,1,9,16,100]  k = 0.  
