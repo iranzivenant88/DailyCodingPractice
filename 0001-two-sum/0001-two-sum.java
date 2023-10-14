@@ -1,16 +1,16 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-    
-        Map<Integer, Integer> map = new HashMap<>(); 
-        for(int i = 0; i < nums.length; i++) {
-            int compl = target - nums[i]; // com = 3
-            if(map.containsKey(compl) && map.get(compl) != i) {
-                int[] res = {i, map.get(compl)};
-                return res;
-            } else {
-               map.put(nums[i], i);  
-            }
+    Map<Integer, Integer> map = new HashMap<>();
+   
+    for(int i = 0;i<nums.length;i++){
+        int compliment = target-nums[i];
+        if(map.containsKey(compliment)){
+            int []result = {map.get(compliment),i};
+           return result;  
         }
-        return null;        
+        map.put(nums[i],i);
+    }
+   
+    throw new IllegalArgumentException("There is no correct answer ");
     }
 }
