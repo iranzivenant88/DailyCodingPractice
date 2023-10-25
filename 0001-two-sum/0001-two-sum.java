@@ -11,6 +11,6 @@ class Solution {
         map.put(nums[i],i);
     }
    
-    throw new IllegalArgumentException("There is no correct answer ");
+    throw new ArithmeticException("There is no correct answer ");
     }
 }
