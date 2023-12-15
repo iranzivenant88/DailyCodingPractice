@@ -17,7 +17,6 @@ class Solution {
         ListNode slow = head;
         ListNode copySlow = slow;
         ListNode faster = head;
-        //int a  = n;
         for(int i = 0;i<n;i++){ 
                faster = faster.next;
             }  
