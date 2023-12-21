@@ -28,16 +28,8 @@ class Solution {
         }
        odd.next = evenStart; 
         
-//         while(odd.next != null){
-//             odd.next = odd.next.next;
-//             odd = odd.next;
-//         }
-//         while(even != null){
-//             odd.next = even;
-//             even = even.next.next;  
-//             odd = odd.next;
-//         }
-        return result;
+
+        return head;
         
     }
 }
