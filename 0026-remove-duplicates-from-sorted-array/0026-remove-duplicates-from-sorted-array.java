@@ -10,9 +10,9 @@ class Solution {
         int count = 1;
         for(int t = 1 ; t < nums.length; t++){
             if(nums[t] != nums[i]){
-                count ++;
                 i++;
                 nums[i] = nums[t];
+                           count ++;
             }
         }
           return count;
