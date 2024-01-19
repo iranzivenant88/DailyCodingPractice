@@ -7,13 +7,15 @@ class Solution {
             return 1 ; 
         }
         int i = 0;
+        int t = 1;
         int count = 1;
-        for(int t = 1 ; t < nums.length; t++){
+        while(i < t && t < nums.length){
             if(nums[t] != nums[i]){
                 i++;
                 nums[i] = nums[t];
-                           count ++;
+                count ++;
             }
+            t++;
         }
           return count;
 
