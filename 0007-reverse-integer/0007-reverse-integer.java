@@ -5,7 +5,7 @@ class Solution {
         int digit = x % 10;
              if(reverse > Integer.MAX_VALUE/10 || reverse< Integer.MIN_VALUE/10){
               return 0;  
-        }else
+       }
          
            reverse = reverse *10 + digit;
             x /= 10;
