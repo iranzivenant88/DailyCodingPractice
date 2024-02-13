@@ -11,23 +11,22 @@
  */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        ListNode slow = headA;
-        ListNode fast = headB;
-        
-        while(fast != slow){
-            if(slow == null){
-                slow = headB;
+        ListNode first = headA;
+        ListNode second = headB;
+        while( first != second){
+            if(first != null){
+                first = first.next;
             }else{
-                slow = slow.next;
+                first = headB;
             }
-            if(fast == null){
-                fast = headA;
-            }else
-            fast = fast.next;
+           if(second == null){
+               second = headA;
+           }else{
+               second = second.next;
+           }
         }
- 
-        if(fast == slow){
-            return slow;
+        if( first == second){
+            return first;
         }
         return null;
     }
