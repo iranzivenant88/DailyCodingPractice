@@ -15,28 +15,19 @@ class Solution {
         }
         ListNode prev = new ListNode(0);
         prev.next = head;
-//         ListNode result = prev;
-        ListNode current = prev;
+        ListNode result = prev;
+        ListNode current = head;
         
-//         while(current != null){
-//             if(current.val == val){
-//                 prev.next = current.next;
-//                 current = prev.next;
-//             }else{
-//                 prev = current ;
-//                 current = current.next;
-//             }
-//         }
-        while (current.next != null) {
-            if(current.next.val == val) {
-                current.next = current.next.next;
-            } else{
+        while(current != null){
+            if(current.val == val){
+                prev.next = current.next;
+                current = prev.next;
+            }else{
+                prev = current ;
                 current = current.next;
             }
         }
-        return prev.next;
-        
-        //return result.next;
+        return result.next;
         
     }
 }
