@@ -13,19 +13,15 @@ class Solution {
         if(head == null){
             return null;
         }
-        ListNode prev = new ListNode(0);
-        prev.next = head;
-        ListNode result = prev;
-        ListNode current = head;
+        ListNode dummy = new ListNode(0);
+        ListNode result = dummy;
+        dummy.next = head;
         
-        while(current != null){
-            if(current.val == val){
-                prev.next = current.next;
-                current = prev.next;
-            }else{
-                prev = current ;
-                current = current.next;
-            }
+        while(dummy != null && dummy.next != null){
+            if(dummy.next.val == val){
+                dummy.next = dummy.next.next;      
+            }else
+            dummy = dummy.next;
         }
         return result.next;
         
